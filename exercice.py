@@ -16,11 +16,11 @@ def anagrams(words: list = None) -> bool:
         word2 = str(input())
         i = 0
         for char in word1:
-          i -= 1
-          if char == word2[i]:
-            pass
-          else:
-            return False
+            i -= 1
+            if char == word2[i]:
+                pass
+            else:
+                return False
     return True
 
 def contains_doubles(items: list) -> bool:
@@ -29,23 +29,22 @@ def contains_doubles(items: list) -> bool:
     else:
         return True
 
-
 def best_grades(student_grades: dict) -> dict:
     highest_average = 0
     for key in student_grades:
-      average = sum(student_grades[key]) / len(student_grades[key])
-      if average > highest_average:
-        highest_average = average
-        meilleur = {}
-        meilleur[key] = average
+        average = sum(student_grades[key]) / len(student_grades[key])
+        if average > highest_average:
+            highest_average = average
+            meilleur = {}
+            meilleur[key] = average
     return meilleur
 
-
 def frequence(sentence: str) -> dict:
-    # TODO: Afficher les lettres les plus fréquentes
-    #       Retourner le tableau de lettres
-
-    return {}
+    wordcount = {}
+    wordlist = list(sentence)
+    for elem in wordlist:
+        wordcount[elem] = wordlist.count(elem)
+    return sorted(wordcount.items(), key=lambda x: x[1], reverse=True)
 
 
 def get_recipes():
