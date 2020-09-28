@@ -21,12 +21,13 @@ def anagrams(words: list = None) -> bool:
             pass
           else:
             return False
-
     return True
 
-
 def contains_doubles(items: list) -> bool:
-    return False
+    if len(items) == len(set(items)):
+        return False
+    else:
+        return True
 
 
 def best_grades(student_grades: dict) -> dict:
