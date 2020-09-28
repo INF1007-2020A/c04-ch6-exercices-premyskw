@@ -1,21 +1,28 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-
 def order(values: list = None) -> list:
     if values is None:
-        # TODO: demander les valeurs ici
-        pass
-
-    return []
-
+        values = []
+        for i in range(9):
+            valeur = float(input())
+            values.append(valeur)
+        values.sort()
+    return values
 
 def anagrams(words: list = None) -> bool:
     if words is None:
-        # TODO: demander les mots ici
-        pass
+        word1 = str(input())
+        word2 = str(input())
+        i = 0
+        for char in word1:
+          i -= 1
+          if char == word2[i]:
+            pass
+          else:
+            return False
 
-    return False
+    return True
 
 
 def contains_doubles(items: list) -> bool:
