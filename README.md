@@ -1,4 +1,4 @@
-# Moved to [https://github.com/INF1007-2020A/c04-ch6-2-exercices-premyskw](https://github.com/INF1007-2020A/c04-ch6-2-exercices-premyskw)
+
 # Exercices en vrac (chapitre 6)
 
 Avant de commencer, consultez les instructions à suivre dans [instructions.md](instructions.md)
