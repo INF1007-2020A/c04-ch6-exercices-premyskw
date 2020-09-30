@@ -1,20 +1,20 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-def order(values: list = None) -> list:
+def order(values: list = None) -> bool:
     if values is None:
-        # TODO: demander les valeurs ici
-        for i in range(9):
-            value = float(input("Entrez une valeur: "))
-            values.append(value)
-        values.sort()
-
-    return values
-
+        pass
+    resultat = True
+    index = 0
+    while index < len(values) - 1:
+        if values[index] > values[index+1]:
+            resultat = False
+            break
+        index += 1
+    return resultat
 
 def anagrams(words: list = None) -> bool:
     if words is None:
-        # TODO: demander les mots ici
         mot1 = str(input())
         mot2 = str(input())
         i = 0
@@ -24,20 +24,15 @@ def anagrams(words: list = None) -> bool:
             pass
           else:
             return False
-
     return True
-
 
 def contains_doubles(items: list) -> bool:
     for elem in items:
       if items.count(elem) > 1:
         return True
-    
     return False
 
-
 def best_grades(student_grades: dict) -> dict:
-    # TODO: Retourner un dictionnaire contenant le nom de l'étudiant ayant la meilleure moyenne ainsi que sa moyenne
     best_grade = {}
     highest_average = 0
     for key in student_grades:
@@ -49,8 +44,6 @@ def best_grades(student_grades: dict) -> dict:
     return best_grade
 
 def frequence(sentence: str) -> dict:
-    # TODO: Afficher les lettres les plus fréquentes
-    #       Retourner le tableau de lettres
     sentence.replace(" ", "")
     frequency = dict()
     for letter in sentence:
@@ -63,23 +56,17 @@ def frequence(sentence: str) -> dict:
     return frequency
 
 def get_recipes():
-    # TODO: Demander le nom d'une recette, puis ses ingredients et enregistrer dans une structure de données
     recipe = {}
     nom = str(input("Entrez le nom de la recette: "))
     ingredients = str(input("Entrez les ingredients separes par ', ': ")).split(", ")
     recipe[nom] = ingredients
-    
     return recipe
 
-
 def print_recipe(ingredients) -> None:
-    # TODO: Demander le nom d'une recette, puis l'afficher si elle existe
-    
     try:
       print(ingredients[str(input("Entrez le nom de la recette: "))])
     except:
       return False
-
 
 def main() -> None:
     print(f"On essaie d'ordonner les valeurs...")
