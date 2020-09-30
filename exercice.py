@@ -48,16 +48,19 @@ def best_grades(student_grades: dict) -> dict:
         best_grade[key] = average
     return best_grade
 
-
 def frequence(sentence: str) -> dict:
     # TODO: Afficher les lettres les plus fréquentes
     #       Retourner le tableau de lettres
-    wordcount = {}
-    wordlist = list(sentence)
-    for elem in wordlist:
-      wordcount[elem] = wordlist.count(elem)
-    
-    return sorted(wordcount.items(), key=lambda x: x[1], reverse=True)
+    sentence.replace(" ", "")
+    frequency = dict()
+    for letter in sentence:
+        frequency[letter] = sentence.count(letter)
+    sorted_keys = sorted(frequency, key=frequency.__getitem__, reverse=True)
+    for key in sorted_keys:
+        if frequency[key] > 5:
+            print(f"Le caractere {key} revient {frequency[key]} fois.")
+
+    return frequency
 
 def get_recipes():
     # TODO: Demander le nom d'une recette, puis ses ingredients et enregistrer dans une structure de données
