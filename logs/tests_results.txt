@@ -25,13 +25,13 @@ FAIL: test_order (__main__.TestExercice)
 Traceback (most recent call last):
   File "test_exercice.py", line 25, in test_order
     'Mauvais ordre'
-AssertionError: Lists differ: [[1, 9, -2, 6], ['a', '2', 'hello']] != [[-2, 1, 6, 9], ['2', 'a', 'hello']]
+AssertionError: Lists differ: [False, False] != [[-2, 1, 6, 9], ['2', 'a', 'hello']]
 
 First differing element 0:
-[1, 9, -2, 6]
+False
 [-2, 1, 6, 9]
 
-- [[1, 9, -2, 6], ['a', '2', 'hello']]
+- [False, False]
 + [[-2, 1, 6, 9], ['2', 'a', 'hello']] : Mauvais ordre
 
 ----------------------------------------------------------------------
