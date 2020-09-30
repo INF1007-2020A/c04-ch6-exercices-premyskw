@@ -2,7 +2,7 @@ test_anagram (__main__.TestExercice) ... FAIL
 test_doubles (__main__.TestExercice) ... ok
 test_frequence (__main__.TestExercice) ... ok
 test_grades (__main__.TestExercice) ... ok
-test_order (__main__.TestExercice) ... FAIL
+test_order (__main__.TestExercice) ... ok
 
 ======================================================================
 FAIL: test_anagram (__main__.TestExercice)
@@ -19,22 +19,7 @@ False
 - [True, True]
 + [True, False] : Erreur dans la vérification de l'anagramme
 
-======================================================================
-FAIL: test_order (__main__.TestExercice)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "test_exercice.py", line 25, in test_order
-    'Mauvais ordre'
-AssertionError: Lists differ: [[1, 9, -2, 6], ['a', '2', 'hello']] != [[-2, 1, 6, 9], ['2', 'a', 'hello']]
-
-First differing element 0:
-[1, 9, -2, 6]
-[-2, 1, 6, 9]
-
-- [[1, 9, -2, 6], ['a', '2', 'hello']]
-+ [[-2, 1, 6, 9], ['2', 'a', 'hello']] : Mauvais ordre
-
 ----------------------------------------------------------------------
 Ran 5 tests in 0.001s
 
-FAILED (failures=2)
+FAILED (failures=1)
