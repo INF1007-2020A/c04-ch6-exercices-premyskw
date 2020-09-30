@@ -1,17 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-def order(values: list = None) -> bool:
+def order(values: list = None) -> list:
     if values is None:
-        pass
-    resultat = True
-    index = 0
-    while index < len(values) - 1:
-        if values[index] > values[index+1]:
-            resultat = False
-            break
-        index += 1
-    return resultat
+        for i in range(9):
+            value = float(input())
+            values.append(value)
+        values.sort()
+    return values
 
 def anagrams(words: list = None) -> bool:
     if words is None:
