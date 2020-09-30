@@ -6,7 +6,7 @@ def order(values: list = None) -> list:
         for i in range(9):
             value = float(input())
             values.append(value)
-        values.sort()
+    values.sort()
     return values
 
 def anagrams(words: list = None) -> bool:
