@@ -10,19 +10,17 @@ def order(values: list = None) -> list:
     return values
 
 def anagrams(words: list = None) -> bool:
-    anagramme = ""
     if words is None:
-        mot1 = str(input("Entrez le premier mot: "))
-        mot2 = str(input("Entrez le second mot: "))
-        words.append(mot1, mot2)
-        count = 0
-        anagramme = False
-        for c in word[0]:
-            if c in word[1] or c.upper() in word[1] or c.lower() in word:
-                count += 1
-        if count == len(word[1]):
-            anagramme = True
-    return anagramme
+        mot1 = str(input())
+        mot2 = str(input())
+        i = 0
+        for char in mot1:
+          i -= 1
+          if char == mot2[i]:
+            pass
+          else:
+            return False
+    return True
 
 def contains_doubles(items: list) -> bool:
     for elem in items:
