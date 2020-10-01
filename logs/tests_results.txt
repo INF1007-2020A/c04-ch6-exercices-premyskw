@@ -1,22 +1,25 @@
-test_anagram (__main__.TestExercice) ... ERROR
+test_anagram (__main__.TestExercice) ... FAIL
 test_doubles (__main__.TestExercice) ... ok
 test_frequence (__main__.TestExercice) ... ok
 test_grades (__main__.TestExercice) ... ok
 test_order (__main__.TestExercice) ... ok
 
 ======================================================================
-ERROR: test_anagram (__main__.TestExercice)
+FAIL: test_anagram (__main__.TestExercice)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "test_exercice.py", line 35, in test_anagram
-    output = [exercice.anagrams(v) for v in words]
-  File "test_exercice.py", line 35, in <listcomp>
-    output = [exercice.anagrams(v) for v in words]
-  File "/home/runner/work/c04-ch6-exercices-premyskw/c04-ch6-exercices-premyskw/exercice.py", line 24, in anagrams
-    return anagramme
-UnboundLocalError: local variable 'anagramme' referenced before assignment
+  File "test_exercice.py", line 40, in test_anagram
+    'Erreur dans la vérification de l\'anagramme'
+AssertionError: Lists differ: ['', ''] != [True, False]
+
+First differing element 0:
+''
+True
+
+- ['', '']
++ [True, False] : Erreur dans la vérification de l'anagramme
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.001s
+Ran 5 tests in 0.002s
 
-FAILED (errors=1)
+FAILED (failures=1)
