@@ -11,16 +11,12 @@ def order(values: list = None) -> list:
 
 def anagrams(words: list = None) -> bool:
     if words is None:
-        mot1 = str(input())
-        mot2 = str(input())
-        i = 0
-        for char in mot1:
-          i -= 1
-          if char == mot2[i]:
-            pass
-          else:
-            return False
-    return True
+        words = []
+        while len(words) < 2:
+            words.append(input("Entrer un mot"))
+    word1 = sorted(words[0])
+    word2 = sorted(words[1])
+    return word1==word2
 
 def contains_doubles(items: list) -> bool:
     for elem in items:
